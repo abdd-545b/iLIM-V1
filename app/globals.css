@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #fffdf0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 226, 74, 0.42), transparent 34rem),
+    linear-gradient(180deg, #fffdf0 0%, #ffffff 38%, #fff8c6 100%);
+  color: #1f2937;
+  font-family: ui-rounded, "SF Pro Rounded", "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.star-shape {
+  clip-path: polygon(50% 0%, 61% 33%, 96% 35%, 68% 55%, 79% 90%, 50% 70%, 21% 90%, 32% 55%, 4% 35%, 39% 33%);
+}
+
+.progress-stripes {
+  background-image: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.45) 22%,
+    transparent 22%,
+    transparent 45%,
+    rgba(255, 255, 255, 0.45) 45%,
+    rgba(255, 255, 255, 0.45) 66%,
+    transparent 66%
+  );
+  background-size: 42px 100%;
+}
+
+.success-burst {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 210, 31, 0.7), rgba(255, 210, 31, 0));
+  transform: translate(-50%, -50%);
+  animation: success-pop 1.25s ease-out infinite;
+}
+
+.success-spark {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  background: #ffd21f;
+  box-shadow: 0 0 0 0.35rem rgba(255, 210, 31, 0.16);
+  animation: success-float 1.8s ease-in-out infinite;
+}
+
+.success-spark-one {
+  left: 17%;
+  top: 24%;
+}
+
+.success-spark-two {
+  right: 18%;
+  top: 30%;
+  animation-delay: 0.25s;
+}
+
+.success-spark-three {
+  bottom: 21%;
+  left: 50%;
+  animation-delay: 0.45s;
+}
+
+@keyframes success-pop {
+  0% {
+    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.35);
+  }
+}
+
+@keyframes success-float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-0.9rem) scale(1.15);
+  }
+}
