@@ -1,0 +1,22 @@
+{
+  "name": "iLIM",
+  "short_name": "iLIM",
+  "description": "Қазақ тіліндегі ойын түріндегі ислам оқу платформасы",
+  "lang": "kk",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fffdf0",
+  "theme_color": "#ffd21f",
+  "categories": ["education", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
